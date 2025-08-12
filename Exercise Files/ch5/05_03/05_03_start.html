@@ -17,10 +17,10 @@
 </head>
 <body>
 
-  <img srcset="dogs-400x250.png, dogs-800x500.png 2x"
+  <!-- <img srcset="dogs-400x250.png, dogs-800x500.png 2x"
         src="dogs-400x250.png" 
         width="400" heihgt="250" 
-        alt="Group of dogs running over the lawn">
+        alt="Group of dogs running over the lawn"> -->
 
    <img srcset="dogs-400x250.png 400w,
                  dogs-800x500.png 800w,
@@ -29,8 +29,20 @@
               (max-width: 1000px) 600px,
               1600px"                
         src="dogs-400x250.png"  
-        alt="Group of dogs running over the lawn">
-        class="responsive"
+        alt="Group of dogs running over the lawn"
+        class="responsive">
+
+  <picture>
+    <source media="(max-width: 600 px)"
+            srcset="dogs-square-400.png,
+                    dogs-square-800.png 2x">
+    <source media="(max-width: 601 px)"
+            srcset="dogs-800x500.png
+                    dogs-1600x1000.png 2x">                
+    <img src="dogs-800x500.png" 
+        alt="Group of dogs running over the lawn"
+        class="responsive">
+  </picture>
 
 </body>
 </html>
